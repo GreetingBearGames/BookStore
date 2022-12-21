@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
     private float _money, _moneyPerSecond, _customerPerSecond, _productPerSecond;
     private static GameManager _instance;
-    private bool _isGameOver = false, _isWin = false, _isLose = false, _isGameStarted = false;
+    private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
     private int _savedLevel;
     public static GameManager Instance {
         get {
@@ -82,15 +82,9 @@ public class GameManager : MonoBehaviour {
     private void Awake() {
         Instance = this;
         Money = PlayerPrefs.GetFloat("MoneyAmount", 0f);
-        MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 0f);
-        CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 0f);
-        ProductPerSecond = PlayerPrefs.GetFloat("ProductPerSecAmount", 0f);
-    }
-    public void UpdateMoney(float updateAmount) {
-        Money += updateAmount;
-        if (Money < 0) {
-            Money = 0;
-        }
+        MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 1f);
+        CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 1f);
+        ProductPerSecond = PlayerPrefs.GetFloat("ProductPerSecAmount", 1f);
     }
     public void NextLevel() {
         PlayerPrefs.SetFloat("MoneyAmount", Money);
