@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    private float _money, _moneyPerSecond, _customerPerSecond, _productPerSecond;
+    private float _money, _moneyPerSecond, _customerPerSecond, _productPerSecond, _bookValue;
     private static GameManager _instance;
     private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
     private int _savedLevel;
@@ -27,6 +27,17 @@ public class GameManager : MonoBehaviour {
             }
             else{
                 _money = value;
+            }
+        }
+    }
+    public float BookValue {
+        get => _bookValue;
+        set{
+            if(value < 0){
+                Debug.Log("Money can't be negative value!");
+            }
+            else{
+                _bookValue = value;
             }
         }
     }
@@ -85,13 +96,16 @@ public class GameManager : MonoBehaviour {
         MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 1f);
         CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 1f);
         ProductPerSecond = PlayerPrefs.GetFloat("ProductPerSecAmount", 1f);
+        BookValue = PlayerPrefs.GetFloat("BookValue", 1f);
     }
     public void NextLevel() {
         PlayerPrefs.SetFloat("MoneyAmount", Money);
         PlayerPrefs.SetFloat("MoneyPerSec", MoneyPerSecond);
         PlayerPrefs.SetFloat("CustomerPerSecAmount", CustomerPerSecond);
         PlayerPrefs.SetFloat("ProductPerSecAmount", ProductPerSecond);
+        PlayerPrefs.SetFloat("BookValue", BookValue);
         PlayerPrefs.SetInt("SavedLeved", _savedLevel + 1);
+
         LevelLoader.Current.ChangeLevel("Level " + PlayerPrefs.GetInt("SavedLeved"));
     }
 }

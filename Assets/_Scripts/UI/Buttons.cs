@@ -9,7 +9,7 @@ public class Buttons : MonoBehaviour
     [SerializeField] private Button _incomeButton, _increaseProductionSpeedButton, _addNewSellerButton;
     //Decide values while thinking on game maths
     public void IncreaseIncome(){
-        GameManager.Instance.MoneyPerSecond += 1.0f;
+        GameManager.Instance.BookValue += 1.0f;
     }
     public void IncreaseProductionSpeed(){
         GameManager.Instance.ProductPerSecond += 1.0f;
