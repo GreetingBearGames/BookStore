@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 2078517559322762933}
   m_Layer: 0
   m_Name: SellerDesk
-  m_TagString: Seller
+  m_TagString: SellerDesk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
