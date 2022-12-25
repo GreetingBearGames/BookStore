@@ -3,7 +3,32 @@ guid: 9200c29f1bb2549e2b0283825f4d68e9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 1
+    second: {fileID: 2100000, guid: 1d0d08abf52e842f6a9096e050de0b68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 2
+    second: {fileID: 2100000, guid: 754be17209359415db14d3b9a95701ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 4
+    second: {fileID: 2100000, guid: be4e01625335546f5879c28a67b48a4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: c16e86acfd4ee425eb093bb5dca34d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tshirt Design 1
+    second: {fileID: 2100000, guid: b39b3a2920c794c5aa3d0243feab78ed, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -44,7 +69,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

@@ -923,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6903183873158264469}
   m_Layer: 0
-  m_Name: Packager
+  m_Name: PackagerDesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

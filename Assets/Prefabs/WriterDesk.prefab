@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1776656843954177438}
   m_Layer: 0
-  m_Name: Writer
+  m_Name: WriterDesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,13 +10,9 @@ public class CustomerMovement : MonoBehaviour
     {
         _animator = this.transform.parent.gameObject.GetComponent<Animator>();
         _animator.SetBool("isWalking", true);
+        _animator.SetFloat("cycleOffst", Random.Range(0f, 0.99f));  //her bir instance'ın farklı yürüme başlangıç noktaları
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnCollisionEnter(Collision other)
     {
