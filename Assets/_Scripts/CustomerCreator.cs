@@ -32,7 +32,7 @@ public class CustomerCreator : MonoBehaviour
     }
 
 
-    private void AddNewSeller()
+    public void AddNewSeller()
     {
         if (_index == 0)
         {
@@ -49,14 +49,5 @@ public class CustomerCreator : MonoBehaviour
         }
 
         _index++;
-    }
-
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            AddNewSeller();
-        }
     }
 }
