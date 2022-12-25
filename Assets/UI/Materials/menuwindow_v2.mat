@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<<< HEAD:Assets/Materials/char_man.mat
---- !u!114 &-398700669044220825
-========
---- !u!114 &-947478451053533381
->>>>>>>> Melih:Assets/UI/Materials/MoneyUI.mat
+--- !u!114 &-7736660753333168173
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoneyUI
+  m_Name: menuwindow_v2
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -39,11 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-<<<<<<<< HEAD:Assets/Materials/char_man.mat
-        m_Texture: {fileID: 2800000, guid: 0602ea2204d552b4fa6a3a0287398bb9, type: 3}
-========
-        m_Texture: {fileID: 2800000, guid: 4c38c05fa576042d2ba04d0e98eb22c4, type: 3}
->>>>>>>> Melih:Assets/UI/Materials/MoneyUI.mat
+        m_Texture: {fileID: 2800000, guid: 375bc3fc5b5d54835abe1e940893c42d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -67,11 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<<< HEAD:Assets/Materials/char_man.mat
-        m_Texture: {fileID: 2800000, guid: 0602ea2204d552b4fa6a3a0287398bb9, type: 3}
-========
-        m_Texture: {fileID: 2800000, guid: 4c38c05fa576042d2ba04d0e98eb22c4, type: 3}
->>>>>>>> Melih:Assets/UI/Materials/MoneyUI.mat
+        m_Texture: {fileID: 2800000, guid: 375bc3fc5b5d54835abe1e940893c42d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
