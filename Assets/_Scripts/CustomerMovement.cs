@@ -16,9 +16,9 @@ public class CustomerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Seller" && !_isCollided)
+        if (other.gameObject.tag == "SellerDesk" && !_isCollided)
         {
-            Destroy(this.GetComponent<BoxCollider>());
+            this.GetComponent<BoxCollider>().isTrigger = true;
             _animator.SetBool("isWaiting", true);
             _animator.SetBool("isWalking", false);
             _animator.SetBool("isTurning", true);

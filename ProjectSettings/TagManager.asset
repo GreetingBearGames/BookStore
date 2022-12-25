@@ -7,6 +7,7 @@ TagManager:
   - Seller
   - Customer
   - CustomerDestroyer
+  - SellerDesk
   layers:
   - Default
   - TransparentFX
