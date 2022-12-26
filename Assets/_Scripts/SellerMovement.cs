@@ -5,6 +5,7 @@ using UnityEngine;
 public class SellerMovement : MonoBehaviour
 {
     private Animator _animator;
+    private bool _firstCollide = false;
 
     void Start()
     {
@@ -17,14 +18,20 @@ public class SellerMovement : MonoBehaviour
         if (other.tag == "Customer")
         {
             _animator.SetBool("isTakingMoney", true);
+            StartCoroutine("StopTakingMoney");
+
+            if (!_firstCollide)
+            {
+                GameManager.Instance.MoneyPerSecond = 1;
+                _firstCollide = true;
+            }
         }
     }
-    private void OnTriggerExit(Collider other)
+
+
+    IEnumerator StopTakingMoney()
     {
-        if (other.tag == "Customer")
-        {
-            _animator.SetBool("isTakingMoney", false);
-            Destroy(other.gameObject.GetComponent<BoxCollider>());
-        }
+        yield return new WaitForSeconds(0.2f);
+        _animator.SetBool("isTakingMoney", false);
     }
 }
