@@ -6,6 +6,8 @@ public class CustomerMovement : MonoBehaviour
 {
     private Animator _animator;
     private bool _isCollided = false;
+    [SerializeField] private GameObject _humanExplodeParticle;
+
     void Start()
     {
         _animator = this.transform.parent.gameObject.GetComponent<Animator>();
@@ -20,9 +22,19 @@ public class CustomerMovement : MonoBehaviour
         {
             this.GetComponent<BoxCollider>().isTrigger = true;
             _animator.SetBool("isWaiting", true);
-            _animator.SetBool("isWalking", false);
-            _animator.SetBool("isTurning", true);
             _isCollided = true;
+            StartCoroutine("DestroyHuman");
         }
+    }
+
+    IEnumerator DestroyHuman()
+    {
+        yield return new WaitForSeconds(1);
+        var particleCreatePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        GameObject particle = Instantiate(_humanExplodeParticle, particleCreatePos, Quaternion.identity);
+        particle.GetComponent<ParticleSystem>().Play();
+
+        yield return new WaitForSeconds(0.1f);
+        Destroy(this.transform.parent.gameObject);
     }
 }
