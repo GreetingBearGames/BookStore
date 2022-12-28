@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private float _money, _moneyPerSecond = 1, _customerPerSecond = 1, _productPerSecond = 1, _bookValue = 1;
     private static GameManager _instance;
     private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
-    private int _savedLevel;
+    private int _savedLevel, _productionLevel;
     public static GameManager Instance
     {
         get
@@ -35,6 +35,21 @@ public class GameManager : MonoBehaviour
             else
             {
                 _money = value;
+            }
+        }
+    }
+    public int ProductionLevel
+    {
+        get => _productionLevel;
+        set
+        {
+            if (value < 0)
+            {
+                Debug.Log("Money can't be negative value!");
+            }
+            else
+            {
+                _productionLevel = value;
             }
         }
     }
