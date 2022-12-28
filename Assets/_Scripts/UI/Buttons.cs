@@ -17,6 +17,9 @@ public class Buttons : MonoBehaviour
     public void IncreaseProductionSpeed()
     {
         GameManager.Instance.ProductPerSecond *= 1.2f;
+        _speedLvl++;
+        GameManager.Instance.ProductionLevel = _speedLvl;
+        
     }
     public void AddNewSeller()
     {
