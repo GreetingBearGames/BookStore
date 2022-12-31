@@ -9,6 +9,10 @@ TagManager:
   - CustomerDestroyer
   - SellerDesk
   - Production
+  - book3
+  - book2
+  - package2
+  - package3
   layers:
   - Default
   - TransparentFX

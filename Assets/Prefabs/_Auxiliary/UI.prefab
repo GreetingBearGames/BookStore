@@ -269,6 +269,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 758369209}
+        m_TargetAssemblyTypeName: Production, Assembly-CSharp
+        m_MethodName: ProductionUpgradeHandler
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &582946900
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +642,7 @@ GameObject:
   - component: {fileID: 1051945606}
   - component: {fileID: 1051945607}
   - component: {fileID: 758369213}
+  - component: {fileID: 758369209}
   m_Layer: 0
   m_Name: Buttons_Hor.Layout
   m_TagString: Untagged
@@ -701,6 +714,46 @@ MonoBehaviour:
   _incomeButton: {fileID: 1904112531}
   _increaseProductionSpeedButton: {fileID: 577479545}
   _addNewSellerButton: {fileID: 1225172312}
+--- !u!114 &758369209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051945605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0fc5bce3eaf4644ba1fb0c1a6ff211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeWriterGuy: {fileID: 738085068963705097, guid: 31d1196afffe6384c9dc833b9411ebd8,
+    type: 3}
+  laptopGuy: {fileID: 4638199324748028688, guid: d6e8a3e16708b3a48be72f11b35af0bc,
+    type: 3}
+  writerGuy: {fileID: 5292327711105407810, guid: c10fb4bd6fba947b4a85a22102a9e781,
+    type: 3}
+  laptop: {fileID: 2880291176316995392, guid: aeab7cb1a3126b14f85a1f0bdb3b1007, type: 3}
+  typeWriter: {fileID: 8933497066610461016, guid: 6dc774db64c00384a90aac2bfb2487e2,
+    type: 3}
+  book: {fileID: 4292965961715561357, guid: 4cb2dc2757c84cd4ea256fc7e03a89bc, type: 3}
+  packagerGuy: {fileID: 352684561788483080, guid: 4fc9bb1a19ffb4f8b82f7e4d3f10c294,
+    type: 3}
+  smallMachine: {fileID: 5748521552381648360, guid: 913e8f148a9fe2240a4cbbbff30bda29,
+    type: 3}
+  bigMachine: {fileID: 36611192518098948, guid: cdc20959be2fdd9478a149980eef5b1f,
+    type: 3}
+  temp1: {fileID: 0}
+  temp2: {fileID: 0}
+  temp3: {fileID: 0}
+  firstSlotWriter: {x: -6, y: -5.1, z: 2.17}
+  secondSlotWriter: {x: -8, y: -5.1, z: 2.17}
+  thirdSlotWriter: {x: -4, y: -5.1, z: 2.17}
+  firstSlotPackager: {x: -11.7, y: -5, z: -4.5}
+  secondSlotPackager: {x: -11.7, y: -5, z: -2.5}
+  thirdSlotPackager: {x: -11.7, y: -5, z: -6.5}
+  firstSlotItem: {x: -6, y: -3.6, z: 1}
+  secondSlotItem: {x: -8, y: -3.6, z: 1}
+  thirdSlotItem: {x: -4, y: -3.6, z: 1}
 --- !u!1 &1219835945
 GameObject:
   m_ObjectHideFlags: 0

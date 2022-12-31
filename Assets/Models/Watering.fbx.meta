@@ -3,7 +3,32 @@ guid: ddeaec625efa5914c95c72c659e336d5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 1
+    second: {fileID: 2100000, guid: 98517f9c2a60d7f419bc913e7a7c9880, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 2
+    second: {fileID: 2100000, guid: 754be17209359415db14d3b9a95701ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character 4
+    second: {fileID: 2100000, guid: be4e01625335546f5879c28a67b48a4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: c16e86acfd4ee425eb093bb5dca34d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tshirt Design 1
+    second: {fileID: 2100000, guid: b39b3a2920c794c5aa3d0243feab78ed, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
