@@ -391,7 +391,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -738,7 +738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: firstSlotItem.z
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: thirdSlotItem.x
@@ -750,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: thirdSlotItem.z
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: secondSlotItem.x
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: secondSlotItem.z
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 758369209, guid: 465cdda5e59ae48ca825496916ea8fbd, type: 3}
       propertyPath: firstSlotWriter.x

@@ -9,7 +9,7 @@ public class MoneyDataTexts : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
-        _moneyText.text = GameManager.Instance.Money.ToString();
-        _moneyPerSecText.text = "$" + GameManager.Instance.MoneyPerSecond.ToString() + " / sec";
+        _moneyText.text = ((int)GameManager.Instance.Money).ToString();
+        _moneyPerSecText.text = "$" + ((int)GameManager.Instance.MoneyPerSecond).ToString() + " / sec";
     }
 }
