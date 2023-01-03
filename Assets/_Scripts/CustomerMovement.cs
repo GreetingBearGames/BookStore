@@ -15,7 +15,6 @@ public class CustomerMovement : MonoBehaviour
         _animator.SetFloat("cycleOffst", Random.Range(0f, 0.99f));  //her bir instance'ın farklı yürüme başlangıç noktaları
     }
 
-
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "SellerDesk" && !_isCollided)
@@ -30,10 +29,10 @@ public class CustomerMovement : MonoBehaviour
     IEnumerator DestroyHuman()
     {
         yield return new WaitForSeconds(1);
+        SoundManager.instance.Play("Money Sound");
         var particleCreatePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
         GameObject particle = Instantiate(_humanExplodeParticle, particleCreatePos, Quaternion.identity);
         particle.GetComponent<ParticleSystem>().Play();
-
         yield return new WaitForSeconds(0.1f);
         Destroy(this.transform.parent.gameObject);
     }

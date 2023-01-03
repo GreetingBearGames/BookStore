@@ -13,13 +13,14 @@ public class Buttons : MonoBehaviour
     {
         _incomeLvl++;
         GameManager.Instance.BookValue = _incomeLvl;
+        SoundManager.instance.Play("Button Sound");
     }
     public void IncreaseProductionSpeed()
     {
         GameManager.Instance.ProductPerSecond *= 1.2f;
         _speedLvl++;
         GameManager.Instance.ProductionLevel = _speedLvl;
-        
+        SoundManager.instance.Play("Button Sound");   
     }
     public void AddNewSeller()
     {
@@ -29,5 +30,6 @@ public class Buttons : MonoBehaviour
             _addNewSellerButton.interactable = false;
         }
         GameManager.Instance.CustomerPerSecond *= _sellerCountLvl;
+        SoundManager.instance.Play("Button Sound");
     }
 }
