@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 1051945607}
   - component: {fileID: 758369213}
   - component: {fileID: 758369209}
+  - component: {fileID: 1048542711}
   m_Layer: 0
   m_Name: Buttons_Hor.Layout
   m_TagString: Untagged
@@ -983,6 +984,7 @@ MonoBehaviour:
   _incomeButton: {fileID: 1904112531}
   _increaseProductionSpeedButton: {fileID: 577479545}
   _addNewSellerButton: {fileID: 1225172312}
+  buttonsMoneyAmount: {fileID: 1048542711}
 --- !u!114 &758369209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,6 +1025,21 @@ MonoBehaviour:
   firstSlotItem: {x: -7.3, y: 1.83, z: 2.8}
   secondSlotItem: {x: -9.3, y: 1.83, z: 2.8}
   thirdSlotItem: {x: -5.3, y: 1.83, z: 2.8}
+--- !u!114 &1048542711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051945605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863b36a060d47437ebc89f4a7a3e0503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _incomeButtonAmount: {fileID: 687195821}
+  _increaseProductionSpeedButtonAmount: {fileID: 932933222}
+  _addNewSellerButtonAmount: {fileID: 1554615233}
 --- !u!1 &1163787496
 GameObject:
   m_ObjectHideFlags: 0

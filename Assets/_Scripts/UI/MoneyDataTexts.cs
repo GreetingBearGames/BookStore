@@ -16,7 +16,12 @@ public class MoneyDataTexts : MonoBehaviour
         var mps = GameManager.Instance.MoneyPerSecond;
         _moneyPerSecValue = mps.ToString("F1");
 
-        if (mps >= 1000 && mps < 1000000)   //1K ile 1M ile arasında ise
+
+        if (mps < 1000)   //1K dan küçük ise ise
+        {
+            _moneyPerSecValue = ((int)(mps)).ToString();
+        }
+        else if (mps >= 1000 && mps < 1000000)   //1K ile 1M ile arasında ise
         {
             _moneyPerSecValue = (mps / 1000).ToString("F1") + "K";
         }
@@ -41,7 +46,7 @@ public class MoneyDataTexts : MonoBehaviour
             _moneyValue = (m / 1000000f).ToString("F1") + "M";
         }
 
-        _moneyText.text = "$" + _moneyValue + " / sec";
+        _moneyText.text = "$" + _moneyValue;
 
 
 

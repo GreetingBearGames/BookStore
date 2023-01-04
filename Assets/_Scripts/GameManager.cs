@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    private float _money, _moneyPerSecond = 1, _customerPerSecond = 1, _productPerSecond = 1, _bookValue = 1;
+    private float _money, _moneyPerSecond = 0, _customerPerSecond = 0, _productPerSecond = 1, _bookValue = 1;
     private static GameManager _instance;
     private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
     private int _savedLevel, _productionLevel;
@@ -137,15 +137,15 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         Money = PlayerPrefs.GetFloat("MoneyAmount", 0f);
-        MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 1f);
-        CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 1f);
+        MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 0f);
+        CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 0f);
         ProductPerSecond = PlayerPrefs.GetFloat("ProductPerSecAmount", 1f);
         BookValue = PlayerPrefs.GetFloat("BookValue", 1f);
     }
     public void NextLevel()
     {
         PlayerPrefs.SetFloat("MoneyAmount", Money);
-        PlayerPrefs.SetFloat("MoneyPerSec", MoneyPerSecond);
+        PlayerPrefs.SetFloat("MoneyPerSecAmount", MoneyPerSecond);
         PlayerPrefs.SetFloat("CustomerPerSecAmount", CustomerPerSecond);
         PlayerPrefs.SetFloat("ProductPerSecAmount", ProductPerSecond);
         PlayerPrefs.SetFloat("BookValue", BookValue);

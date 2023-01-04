@@ -22,8 +22,11 @@ public class SellerMovement : MonoBehaviour
 
             if (!_firstCollide)
             {
-                GameManager.Instance.MoneyPerSecond = 1;
-                _firstCollide = true;
+                if (GameManager.Instance.CustomerPerSecond == 0)
+                {
+                    GameManager.Instance.CustomerPerSecond = 1;
+                    _firstCollide = true;
+                }
             }
         }
     }

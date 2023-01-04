@@ -5,7 +5,8 @@ using System.Linq;
 
 public class CustomerCreator : MonoBehaviour
 {
-    [SerializeField] private GameObject _customerPrefab, _sellerPrefab;
+    [SerializeField] private GameObject _customerPrefab1, _customerPrefab2, _sellerPrefab;
+    private GameObject[] customers = new GameObject[2];
     [SerializeField] private float creationDelay = 3f;
     private List<GameObject> _sellers = new List<GameObject>();
     private int _index = 0;
@@ -14,6 +15,8 @@ public class CustomerCreator : MonoBehaviour
     {
         AddNewSeller();
         InvokeRepeating("CreateCustomer", 0, creationDelay);
+        customers[0] = _customerPrefab1;
+        customers[1] = _customerPrefab2;
     }
 
 
@@ -24,7 +27,8 @@ public class CustomerCreator : MonoBehaviour
             if (_sellers[i] != null)
             {
                 var createPos = new Vector3(_sellers[i].transform.position.x, 0, -24);
-                var createdObj = Instantiate(_customerPrefab, createPos, Quaternion.identity);
+                var cretationObj = customers[Random.Range(0, 2)];
+                var createdObj = Instantiate(cretationObj, createPos, Quaternion.identity);
                 createdObj.transform.parent = this.transform;
                 Destroy(createdObj, 20);    //destroy after 20sec
             }
