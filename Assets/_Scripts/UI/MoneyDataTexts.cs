@@ -21,13 +21,17 @@ public class MoneyDataTexts : MonoBehaviour
         {
             _moneyPerSecValue = ((int)(mps)).ToString();
         }
-        else if (mps >= 1000 && mps < 1000000)   //1K ile 1M ile arasında ise
+        else if (mps >= 1000 && mps < 1000000)   //1K ile 1M arasında ise
         {
             _moneyPerSecValue = (mps / 1000).ToString("F1") + "K";
         }
-        else if (mps / 1000 >= 1000) //1M den büyük ise
+        else if (mps >= 1000000 && mps < 1000000000) //1M ile 1B arasında ise
         {
             _moneyPerSecValue = (mps / 1000000f).ToString("F1") + "M";
+        }
+        else if (mps >= 1000000000) //1B den büyük ise
+        {
+            _moneyPerSecValue = (mps / 1000000000f).ToString("F1") + "B";
         }
 
         _moneyPerSecText.text = "$" + _moneyPerSecValue + " / sec";
@@ -37,13 +41,17 @@ public class MoneyDataTexts : MonoBehaviour
         var m = GameManager.Instance.Money;
         _moneyValue = m.ToString("F1");
 
-        if (m >= 1000 && m < 1000000)   //1K ile 1M ile arasında ise
+        if (m >= 1000 && m < 1000000)   //1K ile 1M arasında ise
         {
             _moneyValue = (m / 1000).ToString("F1") + "K";
         }
-        else if (m / 1000 >= 1000) //1M den büyük ise
+        else if (m >= 1000000 && m < 1000000000) //1M ile 1B arasında ise
         {
             _moneyValue = (m / 1000000f).ToString("F1") + "M";
+        }
+        else if (m >= 1000000000) //1B den büyük ise
+        {
+            _moneyValue = (m / 1000000000f).ToString("F1") + "B";
         }
 
         _moneyText.text = "$" + _moneyValue;

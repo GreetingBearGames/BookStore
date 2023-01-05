@@ -7,7 +7,8 @@ using TMPro;
 public class ButtonsMoneyAmount : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _incomeButtonAmount, _increaseProductionSpeedButtonAmount, _addNewSellerButtonAmount;
-    private float _incomeStartValue = 5, _speedStartValue = 200, _sellerStartValue = 1000000;
+    private Button _incomeButton, _speedButton, _sellerButton;
+    private float _incomeStartValue = 5, _speedStartValue = 10, _sellerStartValue = 1000;
 
     void Start()
     {
@@ -18,6 +19,33 @@ public class ButtonsMoneyAmount : MonoBehaviour
         StringEdit(_incomeStartValue, _incomeButtonAmount.gameObject);
         StringEdit(_speedStartValue, _increaseProductionSpeedButtonAmount.gameObject);
         StringEdit(_sellerStartValue, _addNewSellerButtonAmount.gameObject);
+
+        _incomeButton = _incomeButtonAmount.transform.parent.transform.parent.GetComponent<Button>();
+        _speedButton = _increaseProductionSpeedButtonAmount.transform.parent.transform.parent.GetComponent<Button>();
+        _sellerButton = _addNewSellerButtonAmount.transform.parent.transform.parent.GetComponent<Button>();
+    }
+
+
+    private void Update()
+    {
+        if (GameManager.Instance.Money >= _incomeStartValue)
+        {
+            _incomeButton.interactable = true;
+        }
+        else _incomeButton.interactable = false;
+
+        if (GameManager.Instance.Money >= _speedStartValue)
+        {
+            _speedButton.interactable = true;
+        }
+        else _speedButton.interactable = false;
+
+        if (GameManager.Instance.Money >= _sellerStartValue && GameManager.Instance.SellerLevel < 3)
+        {
+            _sellerButton.interactable = true;
+        }
+        else _sellerButton.interactable = false;
+
     }
 
 
@@ -25,26 +53,27 @@ public class ButtonsMoneyAmount : MonoBehaviour
     {
         var textObj = buttonObj.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
         float updatedValue;
+
         if (textObj.name.Contains("Income"))
         {
-            updatedValue = _incomeStartValue * multiplier;
+            updatedValue = _incomeStartValue + multiplier;
             _incomeStartValue = updatedValue;
         }
         else if (textObj.name.Contains("Speed"))
         {
-            updatedValue = _speedStartValue * multiplier;
+            updatedValue = _speedStartValue + multiplier;
             _speedStartValue = updatedValue;
         }
         else
         {
-            updatedValue = _sellerStartValue * multiplier;
+            updatedValue = _sellerStartValue + multiplier;
             _sellerStartValue = updatedValue;
         }
 
         StringEdit(updatedValue, textObj);
 
 
-        GameManager.Instance.Money -= updatedValue;
+        GameManager.Instance.Money -= updatedValue - multiplier;
     }
 
 

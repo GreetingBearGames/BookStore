@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private float _money, _moneyPerSecond = 0, _customerPerSecond = 0, _productPerSecond = 1, _bookValue = 1;
     private static GameManager _instance;
     private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
-    private int _savedLevel, _productionLevel;
+    private int _savedLevel, _productionLevel, _sellerLevel;
     public static GameManager Instance
     {
         get
@@ -51,6 +51,14 @@ public class GameManager : MonoBehaviour
             {
                 _productionLevel = value;
             }
+        }
+    }
+    public int SellerLevel
+    {
+        get => _sellerLevel;
+        set
+        {
+            _sellerLevel = value;
         }
     }
     public float BookValue
