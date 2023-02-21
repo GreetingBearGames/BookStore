@@ -15,6 +15,7 @@ public class MoneyHandle : MonoBehaviour
     public float MoneyPerSecond()
     {
         GameManager.Instance.MoneyPerSecond = GameManager.Instance.BookValue * GameManager.Instance.CustomerPerSecond * GameManager.Instance.ProductPerSecond;
+        TinySauce.OnGameFinished(GameManager.Instance.Money);
         return GameManager.Instance.MoneyPerSecond;
     }
 }

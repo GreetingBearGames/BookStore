@@ -15,7 +15,7 @@ public class Buttons : MonoBehaviour
         _incomeLvl++;
         GameManager.Instance.BookValue = _incomeLvl;
         SoundManager.instance.Play("Button Sound");
-        buttonsMoneyAmount.LevelUp(_incomeButton.gameObject, 10f);
+        buttonsMoneyAmount.LevelUp(_incomeButton.gameObject, 1.5f);
     }
     public void IncreaseProductionSpeed()
     {
@@ -23,15 +23,15 @@ public class Buttons : MonoBehaviour
         GameManager.Instance.ProductPerSecond = _speedLvl;
         GameManager.Instance.ProductionLevel = _speedLvl;
         SoundManager.instance.Play("Button Sound");
-        buttonsMoneyAmount.LevelUp(_increaseProductionSpeedButton.gameObject, 20f);
+        buttonsMoneyAmount.LevelUp(_increaseProductionSpeedButton.gameObject, 1.5f);
     }
     public void AddNewSeller()
     {
         _sellerCountLvl++;
 
         GameManager.Instance.SellerLevel = _sellerCountLvl;
-        GameManager.Instance.CustomerPerSecond *= _sellerCountLvl;
+        GameManager.Instance.CustomerPerSecond *= _sellerCountLvl*3;
         SoundManager.instance.Play("Button Sound");
-        buttonsMoneyAmount.LevelUp(_addNewSellerButton.gameObject, 2);
+        buttonsMoneyAmount.LevelUp(_addNewSellerButton.gameObject, 10f);
     }
 }

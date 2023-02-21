@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     private bool _isGameOver = false, _isWin = false, _isGameStarted = false;
     private int _savedLevel, _productionLevel, _sellerLevel;
+    public Button nextLevelButton;
     public static GameManager Instance
     {
         get
@@ -143,12 +144,21 @@ public class GameManager : MonoBehaviour
     }
     private void Awake()
     {
+        TinySauce.OnGameStarted();
         Instance = this;
         Money = PlayerPrefs.GetFloat("MoneyAmount", 0f);
         MoneyPerSecond = PlayerPrefs.GetFloat("MoneyPerSecAmount", 0f);
         CustomerPerSecond = PlayerPrefs.GetFloat("CustomerPerSecAmount", 0f);
         ProductPerSecond = PlayerPrefs.GetFloat("ProductPerSecAmount", 1f);
         BookValue = PlayerPrefs.GetFloat("BookValue", 1f);
+    }
+    private void Update() {
+        if(Money > 10000000){
+            nextLevelButton.interactable = true;
+        }
+        else{
+            nextLevelButton.interactable = false;
+        }
     }
     public void NextLevel()
     {
@@ -160,5 +170,9 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("SavedLeved", _savedLevel + 1);
 
         LevelLoader.Current.ChangeLevel("Level " + PlayerPrefs.GetInt("SavedLeved"));
+    }
+    public void NextLevelButton(){
+        Money -= 10000000;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

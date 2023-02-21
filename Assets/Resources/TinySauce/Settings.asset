@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa11ec82e9746928e211e7f096812ca, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  gameAnalyticsIosGameKey: 
+  gameAnalyticsIosSecretKey: 
+  gameAnalyticsAndroidGameKey: 043e1f266b9582c9b78c95e7e95a555b
+  gameAnalyticsAndroidSecretKey: 64bb7d125744d47a43543099eb947e606e65dd18
+  facebookAppId: 5931961706891268
+  facebookClientToken: 09e18d71b97deadd929d4f774699e641
+  adjustIOSToken: 
+  adjustAndroidToken: 9gakd6qygqv4
+  EditorIdfa: e2c02774-c412-4923-8704-4ce667d392bc
+  UseRemoteConfig: 0
+  UseVoodooAnalytics: 1
+  companyName: Greeting Bear Games
+  privacyPolicyURL: https://drive.google.com/file/d/1Tg0WDfpk2qlOKhMSIHsZ_AOSe-0v_AjV/view?usp=share_link
+  developerContactEmail: greetingbeargames@gmail.com

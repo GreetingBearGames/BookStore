@@ -53,27 +53,32 @@ public class ButtonsMoneyAmount : MonoBehaviour
     {
         var textObj = buttonObj.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
         float updatedValue;
+        float oldValue;
 
         if (textObj.name.Contains("Income"))
         {
-            updatedValue = _incomeStartValue + multiplier;
+            oldValue = _incomeStartValue;
+            updatedValue = _incomeStartValue * multiplier;
             _incomeStartValue = updatedValue;
         }
         else if (textObj.name.Contains("Speed"))
         {
-            updatedValue = _speedStartValue + multiplier;
+            oldValue = _speedStartValue;
+            updatedValue = _speedStartValue * multiplier;
             _speedStartValue = updatedValue;
         }
         else
         {
-            updatedValue = _sellerStartValue + multiplier;
+            oldValue = _sellerStartValue;
+            updatedValue = _sellerStartValue * multiplier;
             _sellerStartValue = updatedValue;
         }
 
         StringEdit(updatedValue, textObj);
 
 
-        GameManager.Instance.Money -= updatedValue - multiplier;
+        //GameManager.Instance.Money -= updatedValue - multiplier;
+        GameManager.Instance.Money -= oldValue;
     }
 
 

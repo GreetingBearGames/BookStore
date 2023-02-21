@@ -50,7 +50,7 @@ public class Production : MonoBehaviour {
                 Destroy(temp1);
                 temp1 = Instantiate(smallMachine, new Vector3(-12.8f, 1.44f, -1.8f), Quaternion.identity);
                 break;
-            case 17:
+            case 16:
                 //2.slota kitapçı ekle, animasyon hızını default yap(yazar için)
                 foreach (var books2 in book2) {
                     books2.SetActive(false);
@@ -60,7 +60,7 @@ public class Production : MonoBehaviour {
                 temp3 = Instantiate(book, secondSlotItem, Quaternion.identity);
 
                 break;
-            case 20:
+            case 19:
                 //2.slota daktilocu ekle, animasyon hızını default yap(yazar için)
                 AnimationSpeedHandler(false);
                 Destroy(temp2);
@@ -68,7 +68,7 @@ public class Production : MonoBehaviour {
                 temp2 = Instantiate(typeWriterGuy, secondSlotWriter, Quaternion.Euler(0, 180, 0));
                 temp3 = Instantiate(typeWriter, secondSlotItem, Quaternion.identity);
                 break;
-            case 23:
+            case 22:
                 //2.slota laptopcu ekle
                 AnimationSpeedHandler(false);
                 Destroy(temp2);
@@ -76,7 +76,7 @@ public class Production : MonoBehaviour {
                 temp2 = Instantiate(laptopGuy, secondSlotWriter, Quaternion.Euler(0, 180, 0));
                 temp3 = Instantiate(laptop, secondSlotItem, Quaternion.Euler(0, 270, 0));
                 break;
-            case 26:
+            case 25:
                 //2.slota ambalajcı
                 foreach (var packages2 in package2) {
                     packages2.SetActive(false);
@@ -84,7 +84,7 @@ public class Production : MonoBehaviour {
                 AnimationSpeedHandler(false);
                 temp1 = Instantiate(packagerGuy, secondSlotPackager, Quaternion.Euler(0, 90, 0));
                 break;
-            case 29:
+            case 28:
                 //2.slota büyük makine ekle
                 AnimationSpeedHandler(false);
                 Destroy(temp1);
